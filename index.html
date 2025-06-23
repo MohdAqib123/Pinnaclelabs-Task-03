@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Blog</title>
+</head>
+<body>
+    <h1>My Blog</h1>
+    <a href="/create">Create New Post</a>
+    <ul>
+        {% for post in posts %}
+        <li>
+            <h2>{{ post[1] }}</h2>
+            <p>{{ post[2] }}</p>
+            <a href="/edit/{{ post[0] }}">Edit</a> |
+            <a href="/delete/{{ post[0] }}">Delete</a>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
